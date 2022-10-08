@@ -168,7 +168,7 @@
 
 
       async startUp(){
-        await this.sleep(750)
+        await this.sleep(1000)
         this.showingLoading = false
 
       },

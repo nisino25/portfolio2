@@ -2,7 +2,19 @@
   <div class="home">
     <div class="introduction">
       <div class="balloon3-right" id="slide">
-        sup
+        <span>
+          <VueWriter :array="[`お客様の頭の中にあるアイディアを、
+ヒアリングし実現する。
+そんなお手伝いができればと考えています。`]"
+            :typeSpeed="50"
+            :eraseSpeed="25"
+            :delay="3000"
+            :interval="3000"
+            :start="3500"
+          />
+
+          
+        </span>
       </div>
       <img src="../../public/kisspng-clip-art-vector-graphics-silhouette-openclipart-fr-5d28e041717207.0618147015629599374647.png" alt="">
 
@@ -16,13 +28,16 @@
 </template>
 
 <script>
+import VueWriter from "vue-writer";
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
   components: {
+    VueWriter,
     // HelloWorld
+
   }
 }
 </script>
@@ -31,23 +46,32 @@ export default {
 <style>
   .introduction{
     background-color: #D6CDA4;
+    display: block;
+    white-space: pre-wrap;
+    /* position: relative; */
   }
 
   .balloon3-right {
-    position: relative;
+    /* position: relative; */
     display: inline-block;
-    margin: 1.5em 15px 1.5em 0;
-    padding: 0 5px;
+    margin-top: 2em;
+    margin-right: 15em;
+    margin-left: -20em;
+    /* margin: 10em, 30em 0 40em; */
+    padding: 2.5em 2.5em;
     width: 90px;
-    height: 90px;
-    line-height: 90px;
-    text-align: center;
+    height: 12.5em;
+    width: 20em;
+    line-height: 50px;
     color: #FFF;
-    font-size: 20px;
+    font-size: 1.5em;
     font-weight: bold;
-    background: #ff8e9d;
+    background: #3D8361;
     border-radius: 50%;
     box-sizing: border-box;
+    text-align: left;
+    overflow:hidden;
+    /* display: none */
   }
 
   .balloon3-right:before {
@@ -57,14 +81,18 @@ export default {
     right: -25px;
     margin-top: -15px;
     border: 15px solid transparent;
-    border-left: 15px solid #ff8e9d;
+    border-left: 15px solid #3D8361;
     z-index: 0;
+  }
+
+  .balloon3-right span{
+    font-size: 85%;
   }
 
 
   #slide {
     animation: slide 1s forwards;
-    animation-delay: 2s;
+    animation-delay: 2.5s;
       /* position: absolute;
       left: -100px;
       width: 100px;
@@ -82,7 +110,7 @@ export default {
     }
 
     100% {
-    transform: translateX(300px);
+    transform: translateX(17.5em);
     }
   }
 
@@ -94,6 +122,7 @@ export default {
     height: 350px;
     width: auto;
     padding-top: 50px;
-    margin-left: 450px;
+    margin-left: 5em;
+    /* position: absolute; */
   }
 </style>
