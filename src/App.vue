@@ -1,148 +1,151 @@
 <template>
-  <div class="loading"  :class="[showingLoading? '' : 'fadeOut']">
-    <img src="../public/loading.gif" alt="" >
-  </div>
-  <div>
+  <div class="wrapper">
 
-    <header>
-      <div class="top-nav">
-        <h1 id="logo" ><a href="/">Nozomu Ando</a></h1>
-        <div class="socialBtn">
-          <a href="http://instagram.com/nisino25" target="_blank">
-            <img src="../public/icons/ig-icon.png" alt="">
-          </a>
-  
-          <a href="#" target="_blank">
-            <img src="../public/icons/twitter-icon.png" alt="">
-          </a>
-        </div>
-  
-      </div>
-      <nav>
-        <ul class="">
-          <li class="about"><a href="/about">About</a></li>
-          <li class="works"><a href="/works">Works</a></li>
-          <li class="blog"><a href="/blog">Blog</a></li>
-          <li class="contact"><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
-      
-      
-    </header>
-  
-  
-    <router-view/>
-    <!-- <h1 class="text-danger">hey</h1> -->
-  
-    <footer class="footer-section">
-      <div class="container">
-        <div class="footer-cta pt-2 pb-2">
-  
-          <div class="row">
-  
-            <div class="col-xl-6 col-md-6 mb-30">
-              <div class="single-cta">
-                <i class="fas fa-phone"></i>
-                <div class="cta-text">
-                  <h4 class="danger">Call us</h4>
-                  <span>9876543210 0</span>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-xl-6 col-md-6 mb-30">
-              <div class="single-cta">
-                <i class="far fa-envelope-open"></i>
-                <div class="cta-text">
-                  <h4>Mail us</h4>
-                  <span>mail@info.com</span>
-                </div>
-              </div>
-            </div>
-            
+    <div class="loading"  :class="[showingLoading? '' : 'fadeOut']">
+      <img src="../public/loading.gif" alt="" >
+    </div>
+    <div>
+
+      <header>
+        <div class="top-nav">
+          <h1 id="logo" ><a href="/">Nozomu Ando</a></h1>
+          <div class="socialBtn">
+            <a href="http://instagram.com/nisino25" target="_blank">
+              <img src="../public/icons/ig-icon.png" alt="">
+            </a>
+    
+            <a href="#" target="_blank">
+              <img src="../public/icons/twitter-icon.png" alt="">
+            </a>
           </div>
+    
         </div>
-  
-        <div class="footer-content pt-5 pb-5">
+        <nav>
+          <ul class="">
+            <li class="about"><a href="/about">About</a></li>
+            <li class="works"><a href="/works">Works</a></li>
+            <li class="blog"><a href="/blog">Blog</a></li>
+            <li class="contact"><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+        
+        
+      </header>
+    
+    
+      <router-view/>
+      <!-- <h1 class="text-danger">hey</h1> -->
+    
+      <footer class="footer-section">
+        <div class="container">
+          <div class="footer-cta pt-2 pb-2">
+    
             <div class="row">
-                <div class="col-xl-4 col-lg-4 mb-50">
-                    <div class="footer-widget">
-                        <div class="footer-logo">
-                            <a href="index.html"><img src="https://i.ibb.co/QDy827D/ak-logo.png" class="img-fluid" alt="logo"></a>
-                        </div>
-                        <div class="footer-text">
-                            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
-                            elit,Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <div class="footer-social-icon">
-                            <span>Follow us</span>
-                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
-                        </div>
-                    </div>
+    
+              <div class="col-xl-6 col-md-6 mb-30">
+                <div class="single-cta">
+                  <i class="fas fa-phone"></i>
+                  <div class="cta-text">
+                    <h4 class="danger">Call us</h4>
+                    <span>9876543210 0</span>
+                  </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                    <div class="footer-widget">
-                        <div class="footer-widget-heading">
-                            <h3>Useful Links</h3>
-                        </div>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">about</a></li>
-                            <li><a href="#">services</a></li>
-                            <li><a href="#">portfolio</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Expert Team</a></li>
-                            <li><a href="#">Contact us</a></li>
-                            <li><a href="#">Latest News</a></li>
-                        </ul>
-                    </div>
+              </div>
+    
+              <div class="col-xl-6 col-md-6 mb-30">
+                <div class="single-cta">
+                  <i class="far fa-envelope-open"></i>
+                  <div class="cta-text">
+                    <h4>Mail us</h4>
+                    <span>mail@info.com</span>
+                  </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                    <div class="footer-widget">
-                        <div class="footer-widget-heading">
-                            <h3>Subscribe</h3>
-                        </div>
-                        <div class="footer-text mb-25">
-                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
-                        </div>
-                        <div class="subscribe-form">
-                            <form action="#">
-                                <input type="text" placeholder="Email Address">
-                                <button><i class="fab fa-telegram-plane"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              
             </div>
-        </div>
-      </div>
-      <div class="copyright-area">
-          <div class="container">
+          </div>
+    
+          <div class="footer-content pt-5 pb-5">
               <div class="row">
-                  <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                      <div class="copyright-text">
-                          <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">Anup</a></p>
+                  <div class="col-xl-4 col-lg-4 mb-50">
+                      <div class="footer-widget">
+                          <div class="footer-logo">
+                              <a href="index.html"><img src="https://i.ibb.co/QDy827D/ak-logo.png" class="img-fluid" alt="logo"></a>
+                          </div>
+                          <div class="footer-text">
+                              <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                              elit,Lorem ipsum dolor sit amet.</p>
+                          </div>
+                          <div class="footer-social-icon">
+                              <span>Follow us</span>
+                              <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                              <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                              <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                          </div>
                       </div>
                   </div>
-                  <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                      <div class="footer-menu">
+                  <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                      <div class="footer-widget">
+                          <div class="footer-widget-heading">
+                              <h3>Useful Links</h3>
+                          </div>
                           <ul>
                               <li><a href="#">Home</a></li>
-                              <li><a href="#">Terms</a></li>
-                              <li><a href="#">Privacy</a></li>
-                              <li><a href="#">Policy</a></li>
+                              <li><a href="#">about</a></li>
+                              <li><a href="#">services</a></li>
+                              <li><a href="#">portfolio</a></li>
                               <li><a href="#">Contact</a></li>
+                              <li><a href="#">About us</a></li>
+                              <li><a href="#">Our Services</a></li>
+                              <li><a href="#">Expert Team</a></li>
+                              <li><a href="#">Contact us</a></li>
+                              <li><a href="#">Latest News</a></li>
                           </ul>
                       </div>
                   </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                      <div class="footer-widget">
+                          <div class="footer-widget-heading">
+                              <h3>Subscribe</h3>
+                          </div>
+                          <div class="footer-text mb-25">
+                              <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                          </div>
+                          <div class="subscribe-form">
+                              <form action="#">
+                                  <input type="text" placeholder="Email Address">
+                                  <button><i class="fab fa-telegram-plane"></i></button>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
               </div>
           </div>
-      </div>
-    </footer>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">Anup</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </footer>
+  </div>
   </div>
 
 </template>
@@ -171,6 +174,9 @@
         await this.sleep(1000)
         this.showingLoading = false
 
+        // await this.sleep(2000)
+        // this.
+
       },
     },
 
@@ -182,6 +188,11 @@
 </script>
 
 <style>
+  .wrapper{
+    width: 85%;
+    max-width: 1000px;
+    margin: auto auto;
+  }
   .loading{
     position: absolute;
     top:0;
@@ -217,7 +228,8 @@
   }
 
   .fadeOut {
-      opacity:0;
+    opacity:0;
+      /* display:none; */
   }
 
 /* 
@@ -244,6 +256,7 @@
 }
 
 header{
+  /* background-color: red; */
   padding: 100px;
   width: 90%;
   max-width: 1000px;
@@ -318,6 +331,10 @@ ul {
   background: #3D8361;
   position: relative;
   margin-top: 100px;
+  width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
 }
 .footer-cta {
   border-bottom: 1px solid #373636;
