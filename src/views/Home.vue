@@ -92,8 +92,8 @@
 
 
     <div class="skills" id="skills">
-      <div class="container">
-        <h2 class="my-skills">My Skills</h2>
+      <div class="">
+        <strong class="my-skills">My Skills</strong>
         <ul>
           <li v-for="(skill, i) in skillSet" :key="i">
             <div :style="{ width: skill.initLevel + '%'}">
@@ -135,12 +135,13 @@ export default {
       intervalID: '',
 			
 			skillSet: [
-				{ area: 'java', initLevel: 0, level: 50 },
-				{ area: 'c/c++', initLevel: 0, level: 60 },
-				{ area: 'python', initLevel: 0, level: 70 },
-				{ area: 'php', initLevel: 0, level: 80 },
-				{ area: 'css3', initLevel: 0, level: 90 },
-				{ area: 'html5', initLevel: 0, level: 100 }
+				{ area: 'HTML', initLevel: 0, level: 80 },
+        { area: 'CSS', initLevel: 0, level:  75},
+        { area: 'Javascript', initLevel: 0, level:  85},
+        { area: 'PHP', initLevel: 0, level:  50},
+				{ area: 'Laravel', initLevel: 0, level: 60 },
+				{ area: 'Vue.js', initLevel: 0, level: 90 },
+        { area: 'Ruby on Rails', initLevel: 0, level: 45 },
 			],
 
 
@@ -309,6 +310,66 @@ export default {
     margin-right: 0em
   }
 
+@media screen and (max-width: 500px) {
+  .introduction{
+    margin-top:-2em;
+    background-color: #D6CDA4;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+  }
+
+  .balloon3-right {
+    position: relative;
+    display: inline-block;
+    top: 50px;
+    padding: 2em 3em;
+    height: 12.5em;
+    width: 90%;
+    line-height: 50px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    background: #3D8361;
+    border-radius: 50%;
+    box-sizing: border-box;
+    text-align: left;
+    overflow:hidden;
+
+    /* opacity: 0; */
+    /* display: none */
+  }
+
+  .balloon3-right:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-left: 15px solid #3D8361;
+    z-index: 0;
+    
+  }
+
+  .balloon3-right span{
+    position: absolute;
+    font-size: 85%;
+    width: 100%;
+    /* background-color: red; */
+    z-index:10;
+  }
+
+  .introduction img{
+    height: 500px;
+    width: auto;
+    margin-top:1em;
+    margin-left: 7.5em;
+    margin-right: 0em
+  }
+  }
+
 /* process -------------------------------------------------------- */
 .process{
   width: 100%;
@@ -416,6 +477,99 @@ export default {
   margin: auto;
 }
 
+@media screen and (max-width: 500px) {
+  .process{
+  width: 100%;
+  margin: 7.5em auto;
+}
+
+.process .wrapper{
+  background-image: linear-gradient(#1C6758, #3D8361,#1C6758);
+  background-size: 5px 90%;
+  background-repeat: no-repeat;
+  background-position: top 50px left 0.75em ;
+
+  position:relative;
+  
+
+  
+  
+  /* height: 90%; */
+}
+
+.card-container{
+  position: relative;
+  /* background-color: red; */
+}
+
+.process-card{
+  background-color: #3D8361;
+  width: 85%;
+  margin-top: 150px;
+  /* margin: 0; */
+  padding: 20px;
+  color:#EEF2E6;
+  border-radius: 5px;
+
+  box-shadow: 0px 10px 20px #3D8361;
+  padding: 25px;
+  
+}
+
+.process-card .index{
+  font-weight: bold;
+  color: #D6CDA4;
+  font-size: 120px;
+  line-height: 100px;
+  position: absolute;
+  top: -95px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  /* animation: stepscolor 3s infinite alternate; */
+
+
+  opacity: 0.8
+}
+
+.process .left{
+  position:relative;
+  left: 15%
+  /* margin-left: 100px; */
+  /* background-color: red; */
+}
+
+.process .right{
+  position:relative;
+  left:15%;
+  /* float: right; */
+  /* text-align:right; */
+  /* margin-right: 0; */
+  /* background-color: blue; */
+}
+
+
+
+.line-dot{
+  z-index:10;
+
+  aspect-ratio : 1 / 1;
+  /* height:35%; */
+  width: 2em;
+  /* height: 30px; */
+
+  border-radius: 50%;
+  background-color: #EEF2E6; 
+  position: absolute;
+  border: 5px solid #3D8361;
+  left: -77.7vw;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+}
+
 /* works-------------------------------------------------------- */
 .works{
   margin-top:15em;
@@ -512,6 +666,88 @@ export default {
   width: 100%;
 }
 
+@media screen and (max-width: 500px) {
+  .target{
+  margin-top:15em;
+  position:relative;
+  
+
+}
+
+.target .wrapper{
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  align-content: space-between;
+  justify-content: space-between;
+
+}
+
+.target .wrapper .card {
+  width: 30%;
+  margin-top: 2em;
+  padding: 0;
+  /* color:red; */
+  /* border-radius: 20px; */
+  border-radius: 15px;
+  overflow: hidden;
+  perspective: 1px;
+  /* border: 2px solid red;  */
+    /* overflow: hidden; */
+
+  background-color:  #D6CDA4;
+  transition-timing-function: linear;
+  transition: all 1.5s ease;
+  
+  transition-delay: 0s;
+  
+}
+
+
+.target .card:hover{ 
+  background-color:     #3D8361;
+  transition-delay: 0.1s;
+  
+}
+
+.target .card img{
+  height: auto;
+  width: 3em;
+  margin: 20px;
+  /* padding:100px; */
+}
+
+.target .card .title-wrapper{
+  background-color:  #D6CDA4;
+  /* padding: 10px; */
+  position:relative;
+  width: 100%;
+  padding: 2em;
+
+  /* background-color: #aa21ff; */
+  /* width: 100%; */
+  /* padding: 15px; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* height: 6em; */
+}
+
+.target .card .title-wrapper p {
+  /* margin: auto; */
+  position: absolute;
+  /* top: 0; left: 0; bottom: 0; right: 0; */
+  top: 33%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+}
+
+.line-break {
+  width: 100%;
+}
+}
+
 
 
 
@@ -519,21 +755,33 @@ export default {
 .skills{
   margin-top:15em;
   
+  
+  /* background-color: red; */
+  
+}
+
+
+.skills strong{
+  text-align: center;
+  display:block;
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
 
 li {
 	margin: .5em 0 .5em;
-	border: .1em solid darken(rgb(109, 238, 133), 25%);
+	border: .1em solid darken(#3D8361, 25%);
 	border-radius: 3px;
-	background: lighten(rgb(109, 238, 133), 25%);
+	background: lighten(#3D8361, 25%);
 	list-style: none;
 	overflow: hidden;
   
 }
 li div {
+  color: #D6CDA4;
   position: relative;
   height: 1.4em;
-  background: rgb(109, 238, 133);
+  background: #3D8361;
   font-size: 1.2em;
   transition: width 2s;
   transition-delay: 1s;
@@ -545,6 +793,52 @@ label:first-child {
 li div label:last-child {
   position: absolute;
   right: 8px;
+}
+
+@media screen and (max-width: 500px) {
+.skills{
+  margin-top:15em;
+  overflow-y: none;
+  
+}
+
+.skills::-webkit-scrollbar {
+  display: none;
+}
+.skills strong{
+  text-align: center;
+  display:block;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+li {
+  /* background-color: red; */
+	margin: .5em 0 .5em;
+	border: .1em solid darken(#3D8361, 25%);
+	border-radius: 3px;
+	background: lighten(#3D8361, 25%);
+	list-style: none;
+	overflow: hidden;
+  
+}
+li div {
+  color: #D6CDA4;
+  position: relative;
+  height: 1.4em;
+  background: #3D8361;
+  font-size: 1.2em;
+  transition: width 2s;
+  transition-delay: 1s;
+}
+label:first-child {
+  position: absolute;
+  left: 8px;
+}
+li div label:last-child {
+  position: absolute;
+  right: 8px;
+}
 }
 	
 

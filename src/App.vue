@@ -188,58 +188,52 @@
 </script>
 
 <style>
-  .wrapper{
-    width: 85%;
-    max-width: 1000px;
-    margin: auto auto;
-  }
-  .loading{
-    pointer-events: none;
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    
-    /* color: #fff; */
-    z-index: 100;
-    text-align: center;
-    background-color: white;
+.wrapper{
+  width: 85%;
+  max-width: 1000px;
+  margin: auto auto;
+}
+.loading{
+  pointer-events: none;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  
+  /* color: #fff; */
+  z-index: 100;
+  text-align: center;
+  background-color: white;
 
 
-    opacity: 1;
-    transition: opacity .5s ease-in-out;
-    -moz-transition: opacity .5s ease-in-out;
-    -webkit-transition: opacity .5s ease-in-out;
-   
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+  
 
-  }
+}
 
-  .loading img{
-    position: absolute;
-    top: 50%; 
-    left: 50%;
+.loading img{
+  position: absolute;
+  top: 50%; 
+  left: 50%;
 
-    width: 150px;
-    height: auto;
+  width: 150px;
+  height: auto;
 
-    margin-top: -75px;  
-    margin-left: -75px;
+  margin-top: -75px;  
+  margin-left: -75px;
 
-  }
+}
 
-  .fadeOut {
-    opacity:0;
-    /* z-index:; */
-      /* display:none; */
-  }
+.fadeOut {
+  opacity:0;
+  /* z-index:; */
+    /* display:none; */
+}
 
-/* 
-#1C6758
-#
-#
-#
-*/
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -256,6 +250,79 @@
   box-sizing: border-box;
   
 }
+@media screen and (max-width: 500px) {
+.wrapper{
+  width: 85vw;
+  max-width: 1000px;
+  margin: auto auto;
+  /* background-color: red; */
+
+}
+.loading{
+  pointer-events: none;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 105vh;
+  
+  /* color: #fff; */
+  z-index: 100;
+  text-align: center;
+  background-color: white;
+
+
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+  
+
+}
+
+.loading img{
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+
+  width: 150px;
+  height: auto;
+
+  margin-top: -75px;  
+  margin-left: -75px;
+
+}
+
+.fadeOut {
+  opacity:0;
+  /* z-index:; */
+    /* display:none; */
+}
+
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-color: #EEF2E6;
+  
+  /* color: #2c3e50; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: yellow; */
+  width: 100%;
+  overflow-x: hidden;
+  
+}
+}
+
+
+/* top header nav --------------------------------------------------------------------- */
 
 header{
   /* background-color: red; */
@@ -320,11 +387,50 @@ nav ul li{
 
 /* *  For Mobile Screens  */ 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
+  header{
+  /* m-top: 50px; */
+  /* background-color: red; */
+  padding: 50px 10px 100px;
+  width: 90%;
+  /* margin: 50px auto; */
+  list-style: none;
+}
+
+.top-nav{
+  /* background-color: red; */
+  /* display: inline; */
+  display: flex;
+  position: relative;
+
+}
+
+header h1{
+  margin: 0;
+  text-align: left;
+}
+
+header div{
+  text-align: right;
+}
+
+header img{
+  width: 35px;
+  height: auto;
+  margin-left: 17.5px
   
 }
 
-/* -------------------------------------------------------------- */
+nav ul{
+  /* background-color: red; */
+  margin-top: 75px;
+  text-align: center;
+  
+}
+
+}
+
+/* footer -------------------------------------------------------------- */
 ul {
   margin: 0px;
   padding: 0px;
