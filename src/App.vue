@@ -14,9 +14,9 @@
               <img src="../public/icons/ig-icon.png" alt="">
             </a>
     
-            <a href="#" target="_blank">
+            <!-- <a href="#" target="_blank">
               <img src="../public/icons/twitter-icon.png" alt="">
-            </a>
+            </a> -->
           </div>
     
         </div>
@@ -194,6 +194,7 @@
     margin: auto auto;
   }
   .loading{
+    pointer-events: none;
     position: absolute;
     top:0;
     left: 0;
@@ -229,6 +230,7 @@
 
   .fadeOut {
     opacity:0;
+    /* z-index:; */
       /* display:none; */
   }
 

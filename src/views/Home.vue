@@ -91,8 +91,7 @@
     </div>
 
 
-
-    <div class="skills">
+    <div class="skills" id="skills">
       <div class="container">
         <h2 class="my-skills">My Skills</h2>
         <ul>
@@ -134,7 +133,7 @@ export default {
       customers,
 
       intervalID: '',
-			increment: 1,
+			
 			skillSet: [
 				{ area: 'java', initLevel: 0, level: 50 },
 				{ area: 'c/c++', initLevel: 0, level: 60 },
@@ -145,16 +144,11 @@ export default {
 			],
 
 
-      vw: undefined
-    }
-  },
-  mounted(){
-    AOS.init()
-    this.intervalID = setInterval(() => {
-			this.getLevelProgress(this.increment)
-		}, 10)
+      vw: undefined,
+      skillFlag: false,
 
-    document.getElementById('target').scrollIntoView();
+      // vh: 
+    }
   },
 
   methods:{
@@ -182,6 +176,42 @@ export default {
       // }
     },
 
+    skillIncrement(){
+      
+
+      this.skillFlag = true
+
+      for(let i in this.skillSet){
+        let skill = this.skillSet[i]
+        skill.initLevel = skill.level
+      }
+
+
+      // let increment = 1
+      // this.skillFlag = true
+      // this.intervalID = setInterval(() => {
+      //   this.getLevelProgress(increment)
+      //   console.log(increment)
+      // }, 10)
+
+      
+    },
+    handleScroll () {
+      if(this.skillFlag) return
+      // console.log(document.getElementById('skills').offsetTop)
+
+      // console.log(window.scrollY)
+
+      if(window.scrollY > document.getElementById('skills').offsetTop -500){
+        this.skillIncrement()
+      }
+
+
+      // console.log('now')
+
+
+    },
+
      
 
 
@@ -189,9 +219,12 @@ export default {
 	},
 
   created(){
+    AOS.init()
     console.clear()
     window.addEventListener('scroll', this.handleScroll);
     this.vw = document.documentElement.clientWidth 
+
+    // document.getElementById('target').scrollIntoView();
     // console.log(this.vw)
 
 
@@ -199,6 +232,8 @@ export default {
 
     // this.incrementTotalViews()
   },
+
+    
 	// beforeDestroy: function() {
 	// 	clearInterval(this.intervalID)
 	// }
@@ -480,16 +515,11 @@ export default {
 
 
 
-
-
 /* skills -------------------------------------------------------- */
 .skills{
   margin-top:15em;
+  
 }
-
-
-
-
 
 li {
 	margin: .5em 0 .5em;
@@ -498,12 +528,15 @@ li {
 	background: lighten(rgb(109, 238, 133), 25%);
 	list-style: none;
 	overflow: hidden;
+  
 }
 li div {
   position: relative;
   height: 1.4em;
   background: rgb(109, 238, 133);
   font-size: 1.2em;
+  transition: width 2s;
+  transition-delay: 1s;
 }
 label:first-child {
   position: absolute;
