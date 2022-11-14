@@ -174,11 +174,6 @@
 
       async startUp(){
         await this.sleep(1000)
-        let flag = false
-        
-        while(!flag){
-          if(this.isLoaded) flag= true
-        }
 
         
         this.showingLoading = false
