@@ -194,7 +194,7 @@
 
 <style>
 .wrapper{
-  width: 85%;
+  width: 90%;
   max-width: 1000px;
   margin: auto auto;
 }
@@ -304,7 +304,6 @@
     /* display:none; */
 }
 
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -320,8 +319,8 @@
   padding: 0;
   box-sizing: border-box;
   /* background-color: yellow; */
-  width: 100%;
-  overflow-x: hidden;
+  /* width: 100%; */
+  /* overflow-x: hidden; */
   
 }
 }

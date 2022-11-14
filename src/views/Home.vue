@@ -225,13 +225,9 @@ export default {
     window.addEventListener('scroll', this.handleScroll);
     this.vw = document.documentElement.clientWidth 
 
-    // document.getElementById('target').scrollIntoView();
-    // console.log(this.vw)
+    
+    
 
-
-
-
-    // this.incrementTotalViews()
   },
 
     
@@ -313,11 +309,15 @@ export default {
 @media screen and (max-width: 500px) {
   .introduction{
     margin-top:-2em;
-    background-color: #D6CDA4;
+    background-color: #D6CDA5;
     width: 100vw;
     left: 50%;
     transform: translateX(-50%);
     position: relative;
+
+    /* position: static; 
+    margin: 0 auto;
+    width: 100vw; */
   }
 
   .balloon3-right {
