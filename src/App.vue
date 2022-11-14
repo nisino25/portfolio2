@@ -1,7 +1,8 @@
 <template>
   <div class="wrapper">
+    <img src="../public/IMG_8167.png" alt="" style="display:none"  @load="onImgLoad">
 
-    <div class="loading"  :class="[showingLoading? '' : 'fadeOut']">
+    <div class="loading"  :class="[showingLoading? '' : 'fadeOut']" >
       <img src="../public/loading.gif" alt="" >
     </div>
     <div>
@@ -155,6 +156,7 @@
     data(){
       return{
         showingLoading: true,
+        isLoaded: false,
       }
     },
 
@@ -172,11 +174,19 @@
 
       async startUp(){
         await this.sleep(1000)
+        let flag = false
+        
+        while(!flag){
+          if(this.isLoaded) flag= true
+        }
+
+        
         this.showingLoading = false
 
-        // await this.sleep(2000)
-        // this.
+      },
 
+      onImgLoad () {
+        this.isLoaded = true
       },
     },
 
